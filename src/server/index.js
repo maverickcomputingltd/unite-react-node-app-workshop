@@ -6,8 +6,8 @@ dotenv.config();
 const app = new Koa();
 
 app.use(function index(ctx) {
-  console.log('Hello Unite 👋')
-  ctx.body = 'Hello Unite 👋';
+    console.log('Hello Unite 👋')
+    ctx.body = 'Hello Unite updated!! 👋';
 });
 
 export default app;

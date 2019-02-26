@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _dotenv = require('dotenv');
@@ -19,8 +19,8 @@ _dotenv2.default.config();
 var app = new _koa2.default();
 
 app.use(function index(ctx) {
-  console.log('Hello Unite 👋');
-  ctx.body = 'Hello Unite 👋';
+    console.log('Hello Unite 👋');
+    ctx.body = 'Hello Unite updated!! 👋';
 });
 
 exports.default = app;
