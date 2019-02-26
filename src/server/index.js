@@ -1,7 +1,9 @@
 import dotenv from 'dotenv';
 import Koa from 'koa';
 import session from 'koa-session';
-import createShopifyAuth from '@shopify/koa-shopify-auth';
+import createShopifyAuth, {
+    createVerifyRequest,
+} from '@shopify/koa-shopify-auth';
 
 dotenv.config();
 const { SHOPIFY_SECRET, SHOPIFY_API_KEY } = process.env;
@@ -32,10 +34,12 @@ app.use(
     }),
 );
 
+// secure all middleware after this line
+app.use(createVerifyRequest());
 
 app.use(function index(ctx) {
-    console.log('Hello Unite updated!!!!! 👋')
-    ctx.body = 'Hello Unite updated!! 👋';
+    console.log('Hello Unite updated aouthd!!!!! 👋')
+    ctx.body = 'Hello Unite updated aouthd!! 👋';
 });
 
 export default app;

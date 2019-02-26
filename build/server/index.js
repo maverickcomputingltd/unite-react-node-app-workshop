@@ -55,9 +55,12 @@ app.use((0, _koaShopifyAuth2.default)({
     }
 }));
 
+// secure all middleware after this line
+app.use((0, _koaShopifyAuth.createVerifyRequest)());
+
 app.use(function index(ctx) {
-    console.log('Hello Unite updated!!!!! 👋');
-    ctx.body = 'Hello Unite updated!! 👋';
+    console.log('Hello Unite updated aouthd!!!!! 👋');
+    ctx.body = 'Hello Unite updated aouthd!! 👋';
 });
 
 exports.default = app;
