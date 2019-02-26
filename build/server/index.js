@@ -23,10 +23,9 @@ var _koaShopifyAuth2 = _interopRequireDefault(_koaShopifyAuth);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _dotenv2.default.config();
-var _process$env = process.env,
-    SHOPIFY_SECRET = _process$env.SHOPIFY_SECRET,
-    SHOPIFY_API_KEY = _process$env.SHOPIFY_API_KEY;
 
+var SHOPIFY_API_KEY = "9738ed0efa4f609fe751bfd9dfb089f4";
+var SHOPIFY_SECRET = "5450ec0939fb0d1c7a1d79e28bf48878";
 
 var app = new _koa2.default();
 

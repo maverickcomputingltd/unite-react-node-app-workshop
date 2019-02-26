@@ -6,7 +6,9 @@ import createShopifyAuth, {
 } from '@shopify/koa-shopify-auth';
 
 dotenv.config();
-const { SHOPIFY_SECRET, SHOPIFY_API_KEY } = process.env;
+
+const SHOPIFY_API_KEY = "9738ed0efa4f609fe751bfd9dfb089f4";
+const SHOPIFY_SECRET = "5450ec0939fb0d1c7a1d79e28bf48878";
 
 const app = new Koa();
 
